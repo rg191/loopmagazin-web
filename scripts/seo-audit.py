@@ -33,7 +33,7 @@ class HeadingParser(HTMLParser):
         elif tag == "script" and attr.get("type") == "application/ld+json":
             self.in_script_ld = True
             self.script_buffer = ""
-        elif tag == "details" or (tag == "div" and "faq" in (attr.get("class") or "").lower()):
+        elif tag in ("details",) or (tag == "div" and "faq" in (attr.get("class") or "").lower()):
             self.has_faq = True
 
     def handle_endtag(self, tag: str) -> None:
@@ -43,7 +43,11 @@ class HeadingParser(HTMLParser):
             self.in_script_ld = False
             if "FAQPage" in self.script_buffer or "Question" in self.script_buffer:
                 self.has_faq = True
-            if "@type" in self.script_buffer:
+            if "@type" in self.script_buffer and (
+                "Article" in self.script_buffer
+                or "NewsArticle" in self.script_buffer
+                or "BlogPosting" in self.script_buffer
+            ):
                 self.has_json_ld = True
         elif tag in ("h1", "h2", "h3") and hasattr(self, "_current_heading"):
             self.headings.append(self._current_heading)
