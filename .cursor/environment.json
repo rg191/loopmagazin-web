@@ -1,0 +1,10 @@
+{
+  "name": "Loop Magazin",
+  "install": "echo 'Static HTML site — no dependencies to install'",
+  "egressAllowlist": [
+    "loopmagazin.hu",
+    "loopmagazin.com",
+    "www.loopmagazin.hu",
+    "www.loopmagazin.com"
+  ]
+}
