@@ -30,4 +30,23 @@ A `.cursor/environment.json` beállítja a `loopmagazin.hu` egress hozzáférés
 
 ## Deploy
 
-A meglévő deploy folyamatba illeszd be az új `cikk/*.html` fájlokat és frissítsd a `sitemap.xml`-t.
+### Automatikus (GitHub Actions)
+
+Állítsd be a repo Secrets-ben:
+
+| Secret | Példa |
+|--------|-------|
+| `LOOPMAGazin_SSH_KEY` | privát SSH kulcs (PEM) |
+| `LOOPMAGazin_DEPLOY_HOST` | `root@178.105.123.148` |
+| `LOOPMAGazin_DEPLOY_PATH` | `/var/www/loopmagazin.hu` (opcionális) |
+
+Majd: **Actions → Deploy loopmagazin.hu → Run workflow**, vagy push a `main`-re.
+
+### Kézi
+
+```bash
+export LOOPMAGazin_DEPLOY_HOST=user@178.105.123.148
+export LOOPMAGazin_SSH_KEY_FILE=~/.ssh/id_ed25519
+export LOOPMAGazin_DEPLOY_PATH=/var/www/loopmagazin.hu
+bash scripts/deploy-live.sh
+```
