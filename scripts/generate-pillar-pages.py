@@ -6,7 +6,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parent / "cikk"
+OUT = Path(__file__).resolve().parent.parent / "cikk"
 
 HEADER = """<header style="border-bottom:1px solid #000;padding:16px 24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
   <a href="/" style="display:inline-flex;align-items:center;text-decoration:none;line-height:0" aria-label="Loop Magazin — főoldal">
@@ -105,7 +105,7 @@ def page(
 
 PAGES = [
     {
-        "slug": "eu-ai-act-kkv-utmutato-2026",
+        "slug": "eu-ai-act-magyar-kkv-utmutato-2026",
         "title": "EU AI Act magyar KKV-nak — teljes útmutató 2026",
         "description": "Az EU AI Act magyar vállalkozásoknak: kockázati kategóriák, NMHH felügyelet, konkrét lépések és határidők — Big4-zsargon nélkül.",
         "section": "Compliance",
@@ -141,11 +141,11 @@ PAGES = [
 <p>Minden szervezet, amely AI-rendszert fejleszt, telepít vagy használ.</p>
 <h3>Mikor a határidő?</h3>
 <p>2026. augusztus 2. — magas kockázatú rendszerek.</p>
-<p>Kapcsolódó: <a href="https://loopmagazin.hu/cikk/nis2-audit-magyar-cegek.html">NIS2 audit checklista</a> · <a href="https://loopmagazin.hu/cikk/gdpr-nis2-ai-act-egyutt.html">GDPR + NIS2 + AI Act együtt</a></p>
+<p>Kapcsolódó: <a href="https://loopmagazin.hu/cikk/nis2-audit-magyar-cegeknek-checklista.html">NIS2 audit checklista</a> · <a href="https://loopmagazin.hu/cikk/gdpr-nis2-ai-act-egyutt.html">GDPR + NIS2 + AI Act együtt</a></p>
 """,
     },
     {
-        "slug": "nis2-audit-magyar-cegek",
+        "slug": "nis2-audit-magyar-cegeknek-checklista",
         "title": "NIS2 audit magyar cégeknek — checklista és határidők",
         "description": "NIS2 audit magyar KKV-knak: ki érintett, mit vár az SZTFH, konkrét checklista — gyakorlati útmutató.",
         "section": "Kibervédelem",
@@ -170,7 +170,7 @@ PAGES = [
 </ol>
 <h2>Mit vár az SZTFH?</h2>
 <p>Strukturált dokumentációt, nem sablon-dobozokat. A partner sem kérdezi meg, van-e NIS2-d — bizonyítékot kér.</p>
-<p>Kapcsolódó: <a href="https://loopmagazin.hu/cikk/nis2-audit-utan-mit-bizonyits.html">Mit vár az SZTFH audit után</a> · <a href="https://loopmagazin.hu/cikk/eu-ai-act-kkv-utmutato-2026.html">EU AI Act útmutató</a></p>
+<p>Kapcsolódó: <a href="https://loopmagazin.hu/cikk/nis2-audit-utan-mit-bizonyits.html">Mit vár az SZTFH audit után</a> · <a href="https://loopmagazin.hu/cikk/eu-ai-act-magyar-kkv-utmutato-2026.html">EU AI Act útmutató</a></p>
 """,
     },
     {
@@ -200,7 +200,7 @@ PAGES = [
 <li><strong>4. hét:</strong> Dokumentáció összehangolása, képzés</li>
 </ol>
 <p>A Google hivatalos útmutatója szerint nincs szükség külön AI-fájlokra vagy tartalom-darabolásra — a minőségi, egyedi tartalom és a jó SEO alapok elegendők.</p>
-<p>Kapcsolódó pillérek: <a href="https://loopmagazin.hu/cikk/eu-ai-act-kkv-utmutato-2026.html">AI Act</a> · <a href="https://loopmagazin.hu/cikk/nis2-audit-magyar-cegek.html">NIS2</a></p>
+<p>Kapcsolódó pillérek: <a href="https://loopmagazin.hu/cikk/eu-ai-act-magyar-kkv-utmutato-2026.html">AI Act</a> · <a href="https://loopmagazin.hu/cikk/nis2-audit-magyar-cegeknek-checklista.html">NIS2</a></p>
 """,
     },
 ]
