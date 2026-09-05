@@ -20,6 +20,12 @@ Minden pillér-oldal tartalmaz: H1/H2 struktúrát, FAQ blokkot, FAQPage JSON-LD
 # SEO audit meglévő HTML fájlokon
 python3 scripts/seo-audit.py .
 
+# Live cikk letöltés + audit
+python3 scripts/audit-live.py --fetch
+
+# Dupla H1 + hosszú title javítás
+python3 scripts/fix-articles.py /path/to/cikk
+
 # Sitemap generálás
 python3 scripts/generate-sitemap.py --base-url https://loopmagazin.hu
 ```

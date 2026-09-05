@@ -82,7 +82,8 @@ def audit_file(path: Path) -> list[str]:
         issues.append(f"multiple H1 ({len(h1s)})")
     if not parser.has_json_ld:
         issues.append("no JSON-LD schema")
-    if "llms.txt" in html.lower():
+    # llms.txt mention in article prose is intentional editorial content, not a site config reference
+    if re.search(r'href=["\'][^"\']*llms\.txt', html, re.I):
         issues.append("references llms.txt (not needed per Google)")
     if re.search(r"chunk(?:ing|ed)", html, re.I) and "FAQ" not in html:
         issues.append("possible AI-chunking pattern detected")
